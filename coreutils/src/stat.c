@@ -14,7 +14,10 @@
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-   Written by Michael Meskes.  */
+   Written by Michael Meskes.
+
+   Modified for colored-stat by Sim3-14159 in 2026: add optional terminal
+   styling for the default output.  */
 
 #include <config.h>
 
