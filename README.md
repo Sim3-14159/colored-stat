@@ -1,35 +1,31 @@
-# GNU Coreutils `stat`
+# `stat`, with color
 
-This directory contains a modified copy of GNU Coreutils `stat`, based on
-GNU Coreutils version `9.12.73-9c7cf2`.
+A mostly vibe-coded experiment: take GNU Coreutils' `stat` and add optional
+terminal color styling. It is based on GNU Coreutils
+`9.12.73-9c7cf2`—not a from-scratch reimplementation.
 
-The GNU-derived `stat` program and GNU/Gnulib files in this directory are
-licensed under **GNU GPL version 3 or, at your option, any later version**.
-See [`COPYING`](COPYING) and the copyright and license notices in the source
-files. GNU and the Free Software Foundation are the upstream authors; this
-project is not affiliated with or endorsed by them.
+## Build
 
-Changes made for this project include terminal color styling in `src/stat.c`,
-a stat-only `Makefile`, and pruning unrelated Coreutils files. The project
-maintainer's changes are copyright (C) 2026 Sim3-14159 and are offered under
-the same GPL terms when distributed as part of this modified program.
+Run `make`. The build currently links against the checked-out `lib/libcoreutils.a`
+archive, so a fresh checkout needs that archive supplied separately; generated
+binaries, object files, dependency files, and archives are ignored by Git.
+
+## Licensing and attribution
+
+GNU Coreutils `stat` is licensed under the **GNU GPL version 3 or, at your
+option, any later version**; see [`COPYING`](COPYING). Individual Gnulib files
+may carry different terms, including the **GNU Lesser GPL version 2.1 or any
+later version**; retain and follow the notices in each file, and see
+[`COPYING.LESSER`](COPYING.LESSER). GNU and the Free Software Foundation are
+upstream authors; this project is not affiliated with or endorsed by them.
+
+The color changes are noted in `src/stat.c` and are distributed under the
+applicable terms for that modified file.
 
 ## Source completeness
 
-This is a reduced working tree, not a complete corresponding-source package
-for distributing the built executable. In particular,
-`lib/libcoreutils.a` contains object code whose matching source files and
-complete build inputs are not all present here. The included `Makefile` builds
-against that archive, but it does not make the archive's missing source
-available.
-
-Before distributing the executable, provide the complete corresponding
-source for the exact binary, including the source for all bundled library
-objects, applicable configuration/build scripts, and the changes made here,
-or use another source-provision method allowed by GPL-3.0-or-later. Do not
-present this reduced directory alone as the complete source for a distributed
-binary.
-
-The repository's top-level MIT license applies only to the separate
-project-authored material that is not covered by the GPL notices in this
-directory; it does not relicense GNU-derived files.
+This reduced tree is not complete corresponding source for distributing the
+built executable: `lib/libcoreutils.a` contains object code whose matching
+source files and full build inputs are not present. Before distributing the
+executable, provide the complete corresponding source and build materials
+required by the applicable licenses.

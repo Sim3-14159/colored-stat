@@ -1,0 +1,5 @@
+# Build outputs
+*.o
+*.a
+*.d
+/src/stat
