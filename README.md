@@ -4,6 +4,22 @@ A mostly vibe-coded experiment: take GNU Coreutils' `stat` and add optional
 terminal color styling. It is based on GNU Coreutils
 `9.12.73-9c7cf2`—not a from-scratch reimplementation.
 
+## Installation
+
+Run
+
+```
+make
+```
+
+to build *src/stat*. Then you can
+
+```
+cp src/stat ~/.local/bin/
+```
+
+, assuming that *~/.local/bin/* is in your `$PATH`.
+
 ## Build
 
 Run `make`. The build currently links against the checked-out `lib/libcoreutils.a`
