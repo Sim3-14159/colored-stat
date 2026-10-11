@@ -1,4 +1,4 @@
-# LOLstat&mdash;`stat`, with <image alt="color" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMTUwIiB2aWV3Qm94PSIwIDAgNTAwIDE1MCI+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0id2hpdGUiLz4KICA8dGV4dAogICAgeD0iNTAlIgogICAgeT0iMTA1IgogICAgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIgogICAgZm9udC1zaXplPSIxMDAiCiAgICBmb250LXdlaWdodD0iYm9sZCIKICA+PHRzcGFuIGZpbGw9InJlZCI+YzwvdHNwYW4+PHRzcGFuIGZpbGw9InllbGxvdyI+bzwvdHNwYW4+PHRzcGFuIGZpbGw9InB1cnBsZSI+bDwvdHNwYW4+PHRzcGFuIGZpbGw9ImdyZWVuIj5vPC90c3Bhbj48dHNwYW4gZmlsbD0iYnJvd24iPnI8L3RzcGFuPjwvdGV4dD4KPC9zdmc+"> 😛
+# LOLstat&mdash;`stat`, with $\color{red}c\color{yellow}o\color{purple}l\color{green}o\color{red}r$ 😛
 
 A mostly vibe-coded experiment: take GNU Coreutils' `stat` and add optional
 terminal color styling. It is based on GNU Coreutils
