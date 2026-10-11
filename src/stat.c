@@ -195,7 +195,6 @@ static bool color_output;
 static bool color_default_format;
 
 #define COLOR_LABEL "\033[4;33m"
-#define COLOR_WHITE "\033[0;37m"
 #define COLOR_BLUE "\033[0;34m"
 #define COLOR_RESET "\033[0m"
 
@@ -707,7 +706,7 @@ static void out_color_string(char *pformat, size_t prefix_len, char const *arg, 
         fputs(color, stdout);
     out_string(pformat, prefix_len, arg);
     if (color_default_format)
-        fputs(COLOR_WHITE, stdout);
+        fputs(COLOR_RESET, stdout);
 }
 
 static void out_human_access(char *pformat, size_t prefix_len, struct stat const *statbuf)
@@ -722,7 +721,7 @@ static void out_human_access(char *pformat, size_t prefix_len, struct stat const
     make_format(pformat, prefix_len, "-", "s");
     char *formatted = xasprintf(pformat, access);
     for (char const *p = formatted; *p; p++) {
-        char const *color = COLOR_WHITE;
+        char const *color = COLOR_RESET;
         switch (*p) {
             case 'd':
                 color = "\033[34m";
@@ -742,7 +741,7 @@ static void out_human_access(char *pformat, size_t prefix_len, struct stat const
         }
         fputs(color, stdout);
         putchar(*p);
-        fputs(COLOR_WHITE, stdout);
+        fputs(COLOR_RESET, stdout);
     }
     free(formatted);
 }
@@ -753,8 +752,8 @@ static char *colorize_labels(char const *format)
     char *colored = xnmalloc(length + 1, 16);
     char *out = colored;
 
-    memcpy(out, COLOR_WHITE, sizeof COLOR_WHITE - 1);
-    out += sizeof COLOR_WHITE - 1;
+    memcpy(out, COLOR_RESET, sizeof COLOR_RESET - 1);
+    out += sizeof COLOR_RESET - 1;
 
     for (char const *p = format; *p;) {
         if (*p == '%') {
@@ -771,8 +770,8 @@ static char *colorize_labels(char const *format)
             do {
                 *out++ = *p++;
             } while ((*p >= 'A' && *p <= 'Z') || (*p >= 'a' && *p <= 'z'));
-            memcpy(out, COLOR_WHITE, sizeof COLOR_WHITE - 1);
-            out += sizeof COLOR_WHITE - 1;
+            memcpy(out, COLOR_RESET, sizeof COLOR_RESET - 1);
+            out += sizeof COLOR_RESET - 1;
         } else {
             *out++ = *p++;
         }
