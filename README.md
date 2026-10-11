@@ -1,4 +1,4 @@
-# `stat`, with color
+# LOLstat&mdash;`stat`, with $\color{red}c$$\color{yellow}o$$\color{purple}l$$\color{green}o$$\color{brown}r$ 😛
 
 A mostly vibe-coded experiment: take GNU Coreutils' `stat` and add optional
 terminal color styling. It is based on GNU Coreutils
